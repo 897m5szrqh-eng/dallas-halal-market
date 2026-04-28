@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    /* Brand palette: deep forest green + warm gold + cream */
+    /* Brand palette: deep navy + warm gold + cream (matches logo) */
     --background: 40 38% 96%;       /* cream */
-    --foreground: 150 30% 12%;      /* deep forest text */
+    --foreground: 220 50% 14%;      /* deep navy text */
 
     --card: 40 40% 98%;
-    --card-foreground: 150 30% 12%;
+    --card-foreground: 220 50% 14%;
 
     --popover: 40 40% 98%;
-    --popover-foreground: 150 30% 12%;
+    --popover-foreground: 220 50% 14%;
 
-    --primary: 150 45% 18%;         /* deep forest green */
+    --primary: 220 55% 22%;         /* deep navy */
     --primary-foreground: 40 50% 96%;
 
     --secondary: 40 35% 92%;
-    --secondary-foreground: 150 45% 18%;
+    --secondary-foreground: 220 55% 22%;
 
     --muted: 40 25% 90%;
-    --muted-foreground: 150 12% 35%;
+    --muted-foreground: 220 18% 36%;
 
-    --accent: 38 70% 52%;           /* warm gold/amber */
-    --accent-foreground: 150 45% 12%;
+    --accent: 42 75% 52%;           /* warm gold */
+    --accent-foreground: 220 55% 14%;
 
-    --gold: 38 70% 52%;
-    --gold-soft: 40 60% 80%;
-    --forest-deep: 150 50% 10%;
-    --forest: 150 45% 18%;
-    --forest-light: 150 30% 30%;
+    --gold: 42 75% 52%;
+    --gold-soft: 42 60% 80%;
+    --forest-deep: 220 60% 12%;     /* renamed semantically: deepest navy */
+    --forest: 220 55% 22%;          /* navy */
+    --forest-light: 220 25% 34%;    /* muted navy */
     --cream: 40 40% 96%;
     --cream-warm: 35 45% 92%;
 
@@ -39,19 +39,19 @@
 
     --border: 40 20% 85%;
     --input: 40 20% 85%;
-    --ring: 38 70% 52%;
+    --ring: 42 75% 52%;
 
     --radius: 0.625rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(150 50% 10% / 0.85), hsl(150 45% 18% / 0.7));
-    --gradient-gold: linear-gradient(135deg, hsl(38 80% 58%), hsl(32 70% 45%));
-    --gradient-forest: linear-gradient(180deg, hsl(150 45% 18%), hsl(150 50% 10%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 60% 12% / 0.88), hsl(220 55% 22% / 0.7));
+    --gradient-gold: linear-gradient(135deg, hsl(42 85% 60%), hsl(36 75% 46%));
+    --gradient-forest: linear-gradient(180deg, hsl(220 55% 22%), hsl(220 60% 12%));
 
     /* Shadows */
-    --shadow-warm: 0 20px 50px -20px hsl(150 50% 10% / 0.35);
-    --shadow-gold: 0 12px 40px -10px hsl(38 70% 45% / 0.45);
-    --shadow-card: 0 6px 24px -8px hsl(150 30% 12% / 0.18);
+    --shadow-warm: 0 20px 50px -20px hsl(220 60% 12% / 0.4);
+    --shadow-gold: 0 12px 40px -10px hsl(42 75% 45% / 0.5);
+    --shadow-card: 0 6px 24px -8px hsl(220 30% 14% / 0.18);
 
     /* Transitions */
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
