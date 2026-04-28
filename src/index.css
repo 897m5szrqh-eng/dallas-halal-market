@@ -105,4 +105,12 @@
     opacity: 1;
     transform: translateY(0);
   }
+  .marquee {
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
