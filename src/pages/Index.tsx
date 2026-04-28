@@ -507,9 +507,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-10 pb-10 border-b border-cream/10">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-11 w-11 rounded-full bg-gradient-gold grid place-items-center">
-                  <span className="font-display font-bold text-forest-deep text-xl leading-none">D</span>
-                </div>
+                <img src={logo} alt="Dallas Halal Meat logo" width={44} height={44} loading="lazy" className="h-11 w-11 rounded-full object-contain bg-forest-deep ring-2 ring-gold/40" />
                 <div>
                   <div className="font-display font-bold text-cream text-lg">Dallas Market</div>
                   <div className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Halal Meat & Grocery</div>
