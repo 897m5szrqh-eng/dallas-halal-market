@@ -13,7 +13,34 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-forest': 'var(--gradient-forest)',
+      },
+      boxShadow: {
+        warm: 'var(--shadow-warm)',
+        gold: 'var(--shadow-gold)',
+        card: 'var(--shadow-card)',
+      },
       colors: {
+        gold: {
+          DEFAULT: 'hsl(var(--gold))',
+          soft: 'hsl(var(--gold-soft))',
+        },
+        forest: {
+          DEFAULT: 'hsl(var(--forest))',
+          deep: 'hsl(var(--forest-deep))',
+          light: 'hsl(var(--forest-light))',
+        },
+        cream: {
+          DEFAULT: 'hsl(var(--cream))',
+          warm: 'hsl(var(--cream-warm))',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
