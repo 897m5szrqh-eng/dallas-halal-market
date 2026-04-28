@@ -60,13 +60,13 @@ const Index = () => {
             <img
               src={logo}
               alt="Dallas Halal Meat & Grocery logo"
-              width={44}
-              height={44}
-              className="h-11 w-11 rounded-full object-contain shadow-warm ring-2 ring-gold/30 bg-forest-deep"
+              width={56}
+              height={56}
+              className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
             />
             <div className="leading-tight hidden sm:block">
               <div className="font-display font-bold text-forest-deep text-[15px]">Dallas Halal Meat</div>
-              <div className="text-[9px] uppercase tracking-[0.22em] text-gold font-bold">& Grocery · Dallas, TX</div>
+              <div className="text-[9px] uppercase tracking-[0.22em] text-gold font-bold">International Groceries · Butcher · Spices</div>
             </div>
           </a>
           <nav className="hidden md:flex items-center gap-9 text-sm font-medium text-forest-light">
@@ -507,7 +507,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-10 pb-10 border-b border-cream/10">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src={logo} alt="Dallas Halal Meat logo" width={44} height={44} loading="lazy" className="h-11 w-11 rounded-full object-contain bg-forest-deep ring-2 ring-gold/40" />
+                <img src={logo} alt="Dallas Halal Meat logo" width={56} height={56} loading="lazy" className="h-14 w-14 object-contain" />
                 <div>
                   <div className="font-display font-bold text-cream text-lg">Dallas Market</div>
                   <div className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Halal Meat & Grocery</div>
