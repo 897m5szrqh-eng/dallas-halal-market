@@ -310,7 +310,7 @@ const Index = () => {
               <div className="grid grid-cols-3 gap-4 text-center">
                 {[
                   { n: "20+", l: "Cuts daily" },
-                  { n: "0", l: "Freezer first" },
+                  { n: "100%", l: "Zabihah Halal" },
                   { n: "1×1", l: "Custom service" },
                 ].map((s) => (
                   <div key={s.l} className="rounded-2xl border border-cream/15 p-5 bg-cream/5 backdrop-blur-sm">
