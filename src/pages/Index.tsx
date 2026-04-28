@@ -64,8 +64,8 @@ const Index = () => {
               height={56}
               className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
             />
-            <div className="leading-tight hidden sm:block">
-              <div className="font-display font-bold text-forest-deep text-[15px]">Dallas Halal Meat</div>
+            <div className="leading-tight">
+              <div className="font-display font-bold text-forest-deep text-base sm:text-lg">Dallas Halal Meat</div>
               <div className="text-[9px] uppercase tracking-[0.22em] text-gold font-bold">International Groceries · Butcher · Spices</div>
             </div>
           </a>
