@@ -56,7 +56,7 @@ const Index = () => {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="container flex items-center justify-between py-3.5">
-          <a href="#top" className="flex items-center">
+          <a href="#top" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Dallas Halal Meat & Grocery — International Groceries, Butcher, Spices"
@@ -64,6 +64,10 @@ const Index = () => {
               height={110}
               className="h-14 sm:h-16 w-auto object-contain"
             />
+            <div className="leading-tight border-l border-border pl-3">
+              <div className="font-display font-bold text-forest-deep text-base sm:text-lg">Dallas Market</div>
+              <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] text-gold font-bold">Halal Meat & Grocery</div>
+            </div>
           </a>
           <nav className="hidden md:flex items-center gap-9 text-sm font-medium text-forest-light">
             <a href="#about" className="hover:text-forest transition-colors">About</a>
