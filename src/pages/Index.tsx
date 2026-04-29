@@ -244,6 +244,49 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FARM */}
+      <section id="farm" className="py-24 sm:py-32 bg-forest-deep text-cream relative overflow-hidden">
+        <div className="absolute inset-0 pattern-arabesque opacity-10" />
+        <div className="container relative">
+          <div className="text-center max-w-2xl mx-auto mb-14 reveal">
+            <div className="text-gold text-xs uppercase tracking-[0.28em] font-bold mb-4">— From the Farm</div>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-cream mb-5 leading-[1.05]">
+              Raised right. Pasture to plate.
+            </h2>
+            <p className="text-cream/80 text-lg leading-relaxed">
+              Our animals are raised on trusted local farms — humanely cared for, ethically sourced, and Zabihah-slaughtered to bring you the freshest halal meat in Dallas.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {["/videos/farm-1.mp4", "/videos/farm-2.mp4"].map((src, i) => (
+              <div
+                key={src}
+                className="reveal group relative rounded-3xl overflow-hidden border border-gold/30 shadow-warm aspect-[9/16] md:aspect-video bg-forest-darker"
+                style={{ transitionDelay: `${i * 120}ms` }}
+              >
+                <video
+                  src={src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-5 left-5 right-5 flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-gold animate-pulse" />
+                  <span className="text-xs uppercase tracking-[0.22em] text-cream font-bold">
+                    {i === 0 ? "On the Farm" : "Pasture Raised"}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* OFFER */}
       <section id="offer" className="py-24 sm:py-32 bg-background relative overflow-hidden">
         <div className="absolute inset-0 pattern-arabesque opacity-25 pointer-events-none" />
