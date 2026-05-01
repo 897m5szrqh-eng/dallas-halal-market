@@ -5,13 +5,13 @@ import {
 } from "lucide-react";
 import storeFront from "@/assets/store-front.jpg";
 import storeAisle from "@/assets/store-aisle.jpg";
-import butcherCase from "@/assets/butcher-case.jpg";
-import lambChops from "@/assets/lamb-chops.jpg";
-import lambCubes from "@/assets/lamb-cubes.jpg";
+import butcherCase from "@/assets/meat-beef.jpeg";
+import lambChops from "@/assets/meat-lamb-goat.jpeg";
+import lambCubes from "@/assets/meat-lamb-goat.jpeg";
 import seekhKebab from "@/assets/seekh-kebab.jpg";
 import samosasReal from "@/assets/samosas-real.jpg";
 import pastries from "@/assets/pastries.jpg";
-import chickenCase from "@/assets/chicken-case.jpg";
+import chickenCase from "@/assets/meat-chicken.jpeg";
 import frozenCase from "@/assets/frozen-case.jpg";
 import logo from "@/assets/logo.png";
 
@@ -491,8 +491,7 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="font-display font-bold text-forest-deep text-lg">Store Hours</div>
-                  <div className="text-forest-light">Mon – Sat: 9:00 AM – 9:00 PM</div>
-                  <div className="text-forest-light">Sunday: 10:00 AM – 8:00 PM</div>
+                  <div className="text-forest-light">Open Daily: 10:00 AM – 8:00 PM</div>
                 </div>
               </div>
 
