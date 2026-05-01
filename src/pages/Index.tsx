@@ -6,8 +6,8 @@ import {
 import storeFront from "@/assets/store-front.jpg";
 import storeAisle from "@/assets/store-aisle.jpg";
 import butcherCase from "@/assets/meat-beef.jpeg";
-import lambChops from "@/assets/meat-lamb-goat.jpeg";
-import lambCubes from "@/assets/meat-lamb-goat.jpeg";
+import lambChops from "@/assets/meat-lamb-chops.jpeg";
+import lambCubes from "@/assets/meat-lamb-boti.jpeg";
 import seekhKebab from "@/assets/seekh-kebab.jpg";
 import samosasReal from "@/assets/samosas-real.jpg";
 import pastries from "@/assets/pastries.jpg";
