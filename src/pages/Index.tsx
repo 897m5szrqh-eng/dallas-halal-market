@@ -8,6 +8,7 @@ import storeAisle from "@/assets/store-aisle.jpg";
 import butcherCase from "@/assets/meat-beef.jpeg";
 import lambChops from "@/assets/meat-lamb-chops.jpeg";
 import lambCubes from "@/assets/meat-lamb-boti.jpeg";
+import lambGoatCase from "@/assets/meat-lamb-goat.jpeg";
 import seekhKebab from "@/assets/seekh-kebab.jpg";
 import samosasReal from "@/assets/samosas-real.jpg";
 import pastries from "@/assets/pastries.jpg";
@@ -24,7 +25,7 @@ const PHONE_TEL = "tel:+14699690380";
 const offers = [
   { icon: Beef, title: "Beef", desc: "Short ribs, ribeye, brisket, tomahawk, NY strip, T-bone, sirloin & more.", img: butcherCase, tag: "Cut Fresh Daily" },
   { icon: Drumstick, title: "Chicken", desc: "Whole, breast, leg quarter, wings, tenders, drumsticks, boneless, thigh.", img: chickenCase, tag: "Hand-Trimmed" },
-  { icon: ChefHat, title: "Lamb & Goat", desc: "Whole, half, legs, shoulders, chops, shank, boneless or minced — your way.", img: lambChops, tag: "Premium Quality" },
+  { icon: ChefHat, title: "Lamb & Goat", desc: "Whole, half, legs, shoulders, chops, shank, boneless or minced — your way.", img: lambGoatCase, tag: "Premium Quality" },
   { icon: Flame, title: "Marinated & Kebabs", desc: "House-marinated seekh kebabs, boti, tikka — ready for the grill.", img: seekhKebab, tag: "House Recipe" },
   { icon: Sparkles, title: "Samosas & Pastries", desc: "Hot golden samosas and flaky pastries baked fresh in-house every day.", img: samosasReal, tag: "Made Fresh" },
   { icon: Apple, title: "Fresh Produce", desc: "Crisp vegetables, herbs and fruits — bell peppers, eggplant, greens & more.", img: produce, tag: "Farm Fresh" },
