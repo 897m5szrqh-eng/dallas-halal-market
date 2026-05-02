@@ -478,7 +478,6 @@ const Index = () => {
                 {[
                   { icon: ShieldCheck, t: "100% Zabihah Halal", d: "Performed with prayer & care" },
                   { icon: ChefHat, t: "Custom Cuts Included", d: "Bone-in, boneless, minced — your way" },
-                  { icon: Users, t: "Cow Shares Available", d: "Full or split (1/7th shares)" },
                   { icon: Heart, t: "Sadaqah & Aqeeqah", d: "Donations & naming ceremonies" },
                 ].map(({ icon: Ic, t, d }) => (
                   <div key={t} className="flex gap-3 p-4 rounded-xl bg-cream/5 border border-cream/10 backdrop-blur-sm">
