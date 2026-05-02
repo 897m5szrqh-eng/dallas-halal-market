@@ -43,6 +43,7 @@ const galleryStrip = [butcherCase, lambChops, lambCubes, seekhKebab, samosasReal
 
 const Index = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [showQurbaniPopup, setShowQurbaniPopup] = useState(false);
 
   useEffect(() => {
     const els = containerRef.current?.querySelectorAll(".reveal") ?? [];
