@@ -56,8 +56,18 @@ const Index = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-background overflow-x-hidden">
+      {/* EID ANNOUNCEMENT BAR */}
+      <a
+        href="#qurbani"
+        className="fixed top-0 inset-x-0 z-[60] bg-gradient-gold text-forest-deep text-center text-xs sm:text-sm font-bold py-2 px-4 hover:brightness-105 transition-all flex items-center justify-center gap-2"
+      >
+        <Sparkles className="h-3.5 w-3.5" />
+        <span>Eid is coming — Book your Qurbani today</span>
+        <ArrowRight className="h-3.5 w-3.5" />
+      </a>
+
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
+      <header className="fixed top-8 sm:top-9 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="container flex items-center justify-between py-3.5">
           <a href="#top" className="flex items-center gap-3">
             <img
