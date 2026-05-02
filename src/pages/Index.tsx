@@ -56,8 +56,18 @@ const Index = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-background overflow-x-hidden">
+      {/* EID ANNOUNCEMENT BAR */}
+      <a
+        href="#qurbani"
+        className="fixed top-0 inset-x-0 z-[60] bg-gradient-gold text-forest-deep text-center text-xs sm:text-sm font-bold py-2 px-4 hover:brightness-105 transition-all flex items-center justify-center gap-2"
+      >
+        <Sparkles className="h-3.5 w-3.5" />
+        <span>Eid is coming — Book your Qurbani today</span>
+        <ArrowRight className="h-3.5 w-3.5" />
+      </a>
+
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
+      <header className="fixed top-8 sm:top-9 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="container flex items-center justify-between py-3.5">
           <a href="#top" className="flex items-center gap-3">
             <img
@@ -75,6 +85,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-9 text-sm font-medium text-forest-light">
             <a href="#about" className="hover:text-forest transition-colors">About</a>
             <a href="#offer" className="hover:text-forest transition-colors">Selection</a>
+            <a href="#qurbani" className="text-gold hover:text-gold/80 transition-colors font-bold">Qurbani</a>
             <a href="#butcher" className="hover:text-forest transition-colors">Butcher</a>
             <a href="#reviews" className="hover:text-forest transition-colors">Reviews</a>
             <a href="#visit" className="hover:text-forest transition-colors">Visit</a>
@@ -440,26 +451,79 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA STRIP */}
-      <section className="relative py-20 bg-gradient-forest text-cream overflow-hidden">
+      {/* QURBANI BOOKING */}
+      <section id="qurbani" className="relative py-24 sm:py-32 bg-gradient-forest text-cream overflow-hidden">
         <div className="absolute inset-0 pattern-arabesque opacity-15" />
-        <div className="container relative grid md:grid-cols-2 gap-10 items-center">
-          <div className="reveal">
-            <div className="text-gold text-xs uppercase tracking-[0.28em] font-bold mb-3">— Eid & Qurbani 2026</div>
-            <h3 className="font-display font-bold text-3xl sm:text-4xl mb-3 leading-tight">
-              Book your Qurbani with a name you trust.
-            </h3>
-            <p className="text-cream/75 max-w-lg">
-              We handle the entire arrangement with care, transparency, and tradition — just like family.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4 md:justify-end reveal">
-            <a href={PHONE_TEL} className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-gold text-forest-deep font-bold shadow-gold hover:scale-105 transition-transform">
-              <Phone className="h-4 w-4" /> Call to Reserve
-            </a>
-            <a href={MAPS_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-7 py-4 rounded-full border-2 border-cream/40 text-cream font-semibold hover:bg-cream/10 transition-colors">
-              Visit in Store
-            </a>
+        <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+
+        <div className="container relative">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 reveal">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/40 backdrop-blur-sm mb-6">
+                <Sparkles className="h-3.5 w-3.5 text-gold" />
+                <span className="text-cream text-xs font-semibold tracking-wide uppercase">Eid al-Adha 2026 — Now Booking</span>
+              </div>
+              <h2 className="font-display font-black text-cream text-4xl sm:text-5xl lg:text-6xl leading-[1.02] mb-6">
+                Book your <span className="gold-text italic">Qurbani</span> with a name you trust.
+              </h2>
+              <div className="pattern-divider w-32 mb-7" />
+              <p className="text-cream/80 text-lg leading-relaxed mb-8 max-w-xl">
+                Eid is around the corner. Reserve your goat, lamb, or share of cow (full or partial) with us
+                — we handle everything from sourcing to Zabihah slaughter, custom cuts, and clean packaging,
+                with care, transparency, and tradition. Slots fill up fast — call early to lock yours in.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-4 mb-9">
+                {[
+                  { icon: ShieldCheck, t: "100% Zabihah Halal", d: "Performed with prayer & care" },
+                  { icon: ChefHat, t: "Custom Cuts Included", d: "Bone-in, boneless, minced — your way" },
+                  { icon: Users, t: "Cow Shares Available", d: "Full or split (1/7th shares)" },
+                  { icon: Heart, t: "Sadaqah & Aqeeqah", d: "Donations & naming ceremonies" },
+                ].map(({ icon: Ic, t, d }) => (
+                  <div key={t} className="flex gap-3 p-4 rounded-xl bg-cream/5 border border-cream/10 backdrop-blur-sm">
+                    <div className="h-10 w-10 shrink-0 rounded-lg bg-gradient-gold grid place-items-center shadow-gold">
+                      <Ic className="h-5 w-5 text-forest-deep" />
+                    </div>
+                    <div>
+                      <div className="font-display font-bold text-cream">{t}</div>
+                      <div className="text-sm text-cream/70 leading-snug">{d}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <a href={PHONE_TEL} className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-gold text-forest-deep font-bold shadow-gold hover:scale-105 transition-transform">
+                  <Phone className="h-4 w-4" /> Call to Book — {PHONE}
+                </a>
+                <a href={MAPS_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-7 py-4 rounded-full border-2 border-cream/40 text-cream font-semibold hover:bg-cream/10 transition-colors">
+                  Visit in Store
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 reveal">
+              <div className="relative rounded-3xl overflow-hidden border border-gold/30 shadow-warm aspect-[4/5]">
+                <img
+                  src={lambGoatCase}
+                  alt="Qurbani lamb and goat selection at Dallas Halal Meat Market"
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/40 to-transparent" />
+                <div className="absolute top-5 left-5">
+                  <div className="px-3 py-1.5 rounded-full bg-gold text-forest-deep text-[10px] font-bold uppercase tracking-wider shadow-gold">
+                    Limited Slots
+                  </div>
+                </div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="text-[10px] uppercase tracking-[0.25em] text-gold font-bold mb-2">Goat · Lamb · Cow Shares</div>
+                  <div className="font-display text-2xl font-bold text-cream leading-tight mb-1">Reserve Early.</div>
+                  <div className="text-cream/80 text-sm">Trusted by families across Dallas year after year.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
