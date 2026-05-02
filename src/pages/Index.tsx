@@ -54,8 +54,90 @@ const Index = () => {
     return () => io.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (localStorage.getItem("qurbani-popup-dismissed") === "1") return;
+    const t = setTimeout(() => setShowQurbaniPopup(true), 2500);
+    return () => clearTimeout(t);
+  }, []);
+
+  const closeQurbaniPopup = () => {
+    setShowQurbaniPopup(false);
+    try { localStorage.setItem("qurbani-popup-dismissed", "1"); } catch {}
+  };
+
   return (
     <div ref={containerRef} className="min-h-screen bg-background overflow-x-hidden">
+      {/* QURBANI POPUP */}
+      {showQurbaniPopup && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-forest-deep/80 backdrop-blur-sm animate-in fade-in duration-300"
+          onClick={closeQurbaniPopup}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="qurbani-popup-title"
+        >
+          <div
+            className="relative w-full max-w-md sm:max-w-lg bg-forest-deep border-2 border-gold/40 rounded-3xl overflow-hidden shadow-warm animate-in zoom-in-95 duration-300"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeQurbaniPopup}
+              aria-label="Close"
+              className="absolute top-3 right-3 z-10 h-9 w-9 rounded-full bg-forest-deep/70 hover:bg-forest-deep text-cream grid place-items-center border border-cream/20 hover:border-gold transition-colors"
+            >
+              <X className="h-4 w-4" />
+            </button>
+
+            <div className="relative aspect-[16/9] overflow-hidden">
+              <img src={lambGoatCase} alt="Qurbani lamb and goat" className="h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/50 to-transparent" />
+              <div className="absolute inset-0 pattern-arabesque opacity-20" />
+              <div className="absolute bottom-4 left-5 right-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/20 border border-gold/40 backdrop-blur-sm">
+                  <Sparkles className="h-3 w-3 text-gold" />
+                  <span className="text-cream text-[10px] font-bold uppercase tracking-wider">Eid al-Adha 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 sm:p-8 text-cream">
+              <h3 id="qurbani-popup-title" className="font-display font-black text-2xl sm:text-3xl leading-tight mb-3">
+                Book your <span className="gold-text italic">Qurbani</span> today.
+              </h3>
+              <p className="text-cream/75 text-sm sm:text-base leading-relaxed mb-6">
+                Eid is coming soon and slots fill up fast. Reserve your goat, lamb, or share of cow with the
+                family Dallas trusts — Zabihah halal, custom cuts, clean packaging.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={PHONE_TEL}
+                  onClick={closeQurbaniPopup}
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-gradient-gold text-forest-deep font-bold shadow-gold hover:scale-[1.02] transition-transform"
+                >
+                  <Phone className="h-4 w-4" /> Call to Book
+                </a>
+                <a
+                  href="#qurbani"
+                  onClick={closeQurbaniPopup}
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full border-2 border-cream/40 text-cream font-semibold hover:bg-cream/10 transition-colors"
+                >
+                  Learn More <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+
+              <button
+                onClick={closeQurbaniPopup}
+                className="mt-4 w-full text-center text-xs text-cream/50 hover:text-cream/80 transition-colors"
+              >
+                No thanks, maybe later
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* EID ANNOUNCEMENT BAR */}
       <a
         href="#qurbani"
