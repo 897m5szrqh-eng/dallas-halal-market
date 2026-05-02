@@ -75,6 +75,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-9 text-sm font-medium text-forest-light">
             <a href="#about" className="hover:text-forest transition-colors">About</a>
             <a href="#offer" className="hover:text-forest transition-colors">Selection</a>
+            <a href="#qurbani" className="text-gold hover:text-gold/80 transition-colors font-bold">Qurbani</a>
             <a href="#butcher" className="hover:text-forest transition-colors">Butcher</a>
             <a href="#reviews" className="hover:text-forest transition-colors">Reviews</a>
             <a href="#visit" className="hover:text-forest transition-colors">Visit</a>
