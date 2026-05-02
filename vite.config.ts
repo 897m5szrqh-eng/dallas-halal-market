@@ -4,11 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-const isGitHubPagesBuild = process.env.GITHUB_PAGES === "true";
-
 export default defineConfig(({ mode }) => ({
-  base: isGitHubPagesBuild && repositoryName ? `/${repositoryName}/` : "/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
