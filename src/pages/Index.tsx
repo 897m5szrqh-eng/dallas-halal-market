@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   MapPin, Clock, Instagram, Star, Beef, Drumstick, Wheat, Flame,
-  Heart, ArrowRight, Phone, ShieldCheck, Users, Award, Sparkles, ChefHat, Apple,
+  Heart, ArrowRight, Phone, ShieldCheck, Users, Award, Sparkles, ChefHat, Apple, X,
 } from "lucide-react";
 import storeFront from "@/assets/store-front.jpg";
 import storeAisle from "@/assets/store-aisle.jpg";
